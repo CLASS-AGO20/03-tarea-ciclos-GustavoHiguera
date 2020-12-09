@@ -37,6 +37,22 @@ esPrimo(numero){
    
 }
 
+obtenerMultiplos(inicio,fin){
+    if(inicio>fin){
+        t=inicio;
+        fin=inicio;
+        fin=t;
+    }
+    let suma=0;
+    do{
+        if(inicio%3==0){
+            suma=suma+inicio;
+            suma=suma.toString(10);
+        }
+        inicio++;
+    }while(inicio<=fin);
+    return suma;
+}
 
 
 
@@ -58,3 +74,5 @@ console.log(app.esPrimo(7));
 console.log(app.esPrimo(4));
 console.log(app.esPrimo(5));
 console.log(app.esPrimo(27));
+
+console.log(app.obtenerMultiplos(10,25));
