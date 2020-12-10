@@ -64,8 +64,13 @@ if(numero1<numero2){
 let impares=0;
 for(let i=numero1; i>=numero2; i--){
     if(i%2!==0){
-        impares=impares + i + ",";
-        impares=impares.toString();
+        if(impares===0){
+            impares=impares+i;
+            impares=impares.toString();
+        } else {
+            impares=impares+","+i;
+            impares=impares.toString();
+        }
     }
 }
 return impares;
