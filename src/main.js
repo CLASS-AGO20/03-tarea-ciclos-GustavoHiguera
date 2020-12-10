@@ -54,7 +54,22 @@ obtenerMultiplos(inicio,fin){
     return suma;
 }
 
-
+obtenerImpares(numero1,numero2){
+    let t=0;
+if(numero1<numero2){
+    t=numero1;
+    numero1=numero2;
+    numero2=t;
+}
+let impares=0;
+for(let i=numero1; i>=numero2; i--){
+    if(i%2!==0){
+        impares=impares + i + ",";
+        impares=impares.toString();
+    }
+}
+return impares;
+}
 
 
 
@@ -66,13 +81,21 @@ obtenerMultiplos(inicio,fin){
 
 let app = new App();
 
+console.log("Probando sumatoriaSerieUno()");
 console.log(app.sumatoriaSerieUno(6));
 
+console.log("Probando sumatoriaSerieDos()");
 console.log(app.sumatoriaSerieDos(6));
 
+console.log("Probando esPrimo()");
 console.log(app.esPrimo(7));
 console.log(app.esPrimo(4));
 console.log(app.esPrimo(5));
 console.log(app.esPrimo(27));
 
+console.log("Probando obtenerMultiplos()");
 console.log(app.obtenerMultiplos(10,25));
+
+console.log("Probando obtenerImpares()");
+console.log(app.obtenerImpares(5,10));
+console.log(app.obtenerImpares(10,5));
